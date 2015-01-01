@@ -1,0 +1,25 @@
+<h2>Register</h2>
+{{#if passwordError}}
+<p class="red">Error: Passwords do not match.</p>
+{{/if}}
+{{#if registrationIncomplete}}
+<p class="red">Error: Please fill in all required fields.</p>
+{{/if}}
+{{#if usernameTooShort}}
+<p class="red">Error: Username must be at least 8 characters.</p>
+{{/if}}
+{{#if passwordTooShort}}
+<p class="red">Error: Password must be at least 8 characters.</p>
+{{/if}}
+{{#if usernameExists}}
+<p class="red">Error: Username exists. Please choose another username.</p>
+{{/if}}
+<form action='' method='POST' onsubmit='return registerValidate();'>
+Username: <input type="text" name="username" id="username"><br>
+Password: <input type="password" name="password1" id='password1'><br>
+Re-enter password: <input type="password" name="password2" id='password2'><br>
+<input type="submit">
+</form>
+
+<p class="belowform">Already registered? Click <a href="/user">here</a> to login.</p>
+<script src="/javascripts/default.js"></script>

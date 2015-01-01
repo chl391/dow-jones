@@ -1,0 +1,10 @@
+<h2>Login</h2>
+{{#if loginError}}
+<p>Incorrect username and password combination. Please try again.</p>
+{{/if}}
+<form action='' method='POST'>
+Username: <input type="text" name="username"><br>
+Password: <input type="password" name="password"><br>
+<input type="submit">
+</form>
+<p class="belowform">Don't have an account? Sign-up <a href="/user/register">here.</a></p>

@@ -1,0 +1,22 @@
+#right 
+{
+	float:right;
+}
+
+h1 
+{
+    text-align:center;
+	font-family:"Arial";
+}
+
+#center
+{
+	text-align:center;
+}
+
+.container
+{
+	width: 1000px ;
+	margin-left: auto ;
+	margin-right: auto ;
+}

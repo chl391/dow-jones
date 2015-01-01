@@ -1,0 +1,69 @@
+.main{
+	padding: 20px;
+}
+
+.body{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+nav > a{
+	background: #333;
+	padding: 10px 24px;
+	color:#ccc;
+	margin-right: 10px;
+	text-decoration:none;
+	border-radius: 10px;
+	transition: background 0.1s linear 0s, color 0.1s linear 0s;
+}
+
+nav{
+	padding: 13px;
+}
+
+nav > a:hover{
+	background: #00B7FF;
+	color: #FFF;
+	text-decoration:none;
+}
+
+hr{ 
+	margin-top:20px;
+	height: 20px; 
+	border-style: solid; 
+	border-color: black; 
+	border-width: 1px 0 0 0; 
+	border-radius: 20px; 
+} 
+
+hr:before { 
+	display: block; 
+	content: ""; 
+	height: 20px; 
+	margin-top: -21px; 
+	border-style: solid; 
+	border-color: black; 
+	border-width: 0 0 1px 0; 
+	border-radius: 20px; 
+}
+
+a {
+  	color: #00B7FF;
+}
+
+.belowform{
+	padding-top:10px;
+}
+
+.red {
+	color: red;
+}
+
+h1, nav {
+	text-align:center;
+}
+
+#comments{
+	padding:20px;
+	font-size:18px;
+}

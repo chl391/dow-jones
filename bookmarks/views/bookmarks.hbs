@@ -1,0 +1,46 @@
+<h2>Dashboard</h2>
+<p>Welcome, {{ user }}!<br>Not {{ user }}? Click <a href="/user/logout">here</a> to logout.</p>
+<form action='' method='POST'>
+<b>Create New Bookmark List:</b><br>
+Name: <input type='text' name='listname' required><br>
+<input type='submit'>
+</form>
+{{#if bookmarkListNameEmpty}}
+<p class="red">Error: Bookmark List name cannot be empty.</p>
+{{/if}}
+{{#if bookmarkURLEmpty}}
+<p class="red">Error: Bookmark URL name cannot be empty.</p>
+{{/if}}
+<div class="container">
+<div class="row">
+<div id="equalheight"> 
+{{#each lists}}
+<div class="col-md-4">
+<div class="info-block">
+	<h3>{{ listName }}</h3>
+	<form action='/user/bookmarks/removeitem' method='POST'>
+	{{#each bookmarks}}
+	<p><input type='checkbox' name='checkbox' value='{{url}}'> <a href="{{url}}">{{bookmarkName}}</a></p>
+	{{/each}}
+	<input type='hidden' name='slug' value='{{slug}}'>
+	{{#if bookmarks.length}}
+	<input type='submit' value='Delete Bookmarks'>
+	{{/if}}
+	</form>
+	<form action='/user/bookmarks/add' method='POST'>
+		<h4>Create new bookmark:</h4>
+		Name: <input type='text' name='bookmarkname' required><br>
+		URL: <input type='text' name='bookmarkurl' required>
+		<input type='hidden' name='slug' value='{{slug}}'>
+		<input type='submit'>
+	</form>
+	<form action='/user/bookmarks/remove' method='POST'>
+	<input type='hidden' name='slug' value='{{slug}}'>
+	<input type='submit' value='Delete List'>
+	</form>
+</div>
+</div>
+{{/each}}
+</div>
+</div>
+</div>
